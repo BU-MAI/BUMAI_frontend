@@ -5,11 +5,12 @@ export const Container = styled.div`
   width: 100vw;
   height: 4em;
   background: #fff;
-  box-shadow: 0rem 0.4rem 0.2rem 0rem rgba(0, 0, 0, 0.05);
+  border-bottom: 0.2em solid rgba(0, 0, 0, 0.05);
 `;
 
 export const Logo = styled.div`
   position: absolute;
+
   left: 7em;
   top: 0.6em;
   width: 14.5em;
