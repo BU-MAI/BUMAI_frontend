@@ -1,10 +1,18 @@
 import React from "react";
 import * as S from "./style";
+import Header from "../../components/Header/index";
+import MainImg from "../../assets/Main.svg";
 
 const Main = () => {
   return (
     <>
-      <S.Container></S.Container>
+      <Header />
+      <S.MainLayout>
+        <>
+          <img src={MainImg} />
+        </>
+        <S.StartBtn>검사하기</S.StartBtn>
+      </S.MainLayout>
     </>
   );
 };
