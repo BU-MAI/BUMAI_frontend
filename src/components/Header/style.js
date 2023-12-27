@@ -10,7 +10,6 @@ export const Container = styled.div`
 
 export const Logo = styled.div`
   position: absolute;
-
   left: 7em;
   top: 0.6em;
   width: 14.5em;
@@ -22,7 +21,7 @@ export const Logo = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  user-select: none;
+  cursor: pointer;
 `;
 
 export const Login = styled.div`
