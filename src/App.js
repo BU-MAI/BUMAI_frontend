@@ -13,6 +13,7 @@ import Question7 from "./pages/Question7/index";
 import Question8 from "./pages/Question8/index";
 import Question9 from "./pages/Question9/index";
 import Question10 from "./pages/Question10/index";
+import ResultPython from "./pages/ResultPython";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/question8" element={<Question8 />} />
           <Route path="/question9" element={<Question9 />} />
           <Route path="/question10" element={<Question10 />} />
+          <Route path="/ResultPython" element={<ResultPython />} />
         </Routes>
       </BrowserRouter>
     </>
