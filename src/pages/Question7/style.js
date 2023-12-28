@@ -7,7 +7,7 @@ export const Img = styled.img`
 export const Question1Layout = styled.div`
   max-width: 100%;
   display: flex;
-  padding: 8% 20% 0 20%;
+  padding: 7% 20% 0 20%;
   flex-direction: column;
   align-items: center;
   justify-content: center;

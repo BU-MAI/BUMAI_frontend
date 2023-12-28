@@ -2,7 +2,7 @@ import * as S from "./style";
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import Q1 from "../../assets/Q1.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Question1 = () => {
   const navigate = useNavigate();
@@ -12,13 +12,29 @@ const Question1 = () => {
   };
 
   const navigateToQ2 = () => {
+    // Save the last selected button value before navigating
+    localStorage.setItem("lastSelectedButton", selectedButton);
     navigate("/question2");
   };
+
   const [selectedButton, setSelectedButton] = useState(null);
+  const [lastSelectedButton, setLastSelectedButton] = useState(null); // Added state for last selected button
 
   const handleButtonClick = (buttonId) => {
     setSelectedButton(buttonId);
   };
+
+  const logResultToConsole = () => {
+    console.log("Result:", lastSelectedButton);
+  };
+
+  useEffect(() => {
+    const storedLastSelectedButton = localStorage.getItem("lastSelectedButton");
+    if (storedLastSelectedButton) {
+      setLastSelectedButton(parseInt(storedLastSelectedButton, 10));
+    }
+  }, []);
+
   return (
     <>
       <Header />
@@ -46,28 +62,50 @@ const Question1 = () => {
         <S.QusetionBtn>
           <S.Btn5
             isSelected={selectedButton === 5}
-            onClick={() => handleButtonClick(5)}
+            onClick={() => {
+              handleButtonClick(5);
+              setLastSelectedButton(5); // Update last selected button
+            }}
           ></S.Btn5>
           <S.Btn4
             isSelected={selectedButton === 4}
-            onClick={() => handleButtonClick(4)}
+            onClick={() => {
+              handleButtonClick(4);
+              setLastSelectedButton(4); // Update last selected button
+            }}
           ></S.Btn4>
           <S.Btn3
             isSelected={selectedButton === 3}
-            onClick={() => handleButtonClick(3)}
+            onClick={() => {
+              handleButtonClick(3);
+              setLastSelectedButton(3); // Update last selected button
+            }}
           ></S.Btn3>
           <S.Btn2
             isSelected={selectedButton === 2}
-            onClick={() => handleButtonClick(2)}
+            onClick={() => {
+              handleButtonClick(2);
+              setLastSelectedButton(2); // Update last selected button
+            }}
           ></S.Btn2>
           <S.Btn1
             isSelected={selectedButton === 1}
-            onClick={() => handleButtonClick(1)}
+            onClick={() => {
+              handleButtonClick(1);
+              setLastSelectedButton(1); // Update last selected button
+            }}
           ></S.Btn1>
         </S.QusetionBtn>
         <S.QusetionBtn>
           <S.NextBtn onClick={navigateToMain}>이전</S.NextBtn>
-          <S.BackBtn onClick={navigateToQ2}>다음</S.BackBtn>
+          <S.BackBtn
+            onClick={() => {
+              navigateToQ2();
+              logResultToConsole();
+            }}
+          >
+            다음
+          </S.BackBtn>
         </S.QusetionBtn>
       </S.Question1Layout>
     </>

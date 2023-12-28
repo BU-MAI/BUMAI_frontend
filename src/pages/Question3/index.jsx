@@ -24,7 +24,7 @@ const Question3 = () => {
       <Header />
       <S.Question1Layout>
         <S.Question1Title>
-          <S.Title>딴따라라 따란따라~</S.Title>
+          <S.Title>딴따라라 따란따라~🎵</S.Title>
           <S.Title>기상송이 울렸다! 당신의 등교 시간은?</S.Title>
           <S.Img src={Q3} />
         </S.Question1Title>

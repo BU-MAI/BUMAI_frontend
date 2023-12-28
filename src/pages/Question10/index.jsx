@@ -12,7 +12,7 @@ const Question10 = () => {
   };
 
   const navigateToResult = () => {
-    navigate("/");
+    navigate("/resultPython");
   };
   const [selectedButton, setSelectedButton] = useState(null);
 

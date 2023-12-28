@@ -33,7 +33,7 @@ const Question9 = () => {
         <S.QusetionContainer>
           <S.LeftQuestion>
             <S.Question>
-              <S.Q>너를 알게된 며칠 전부터 너가 계속 신경쓰였고 </S.Q>
+              <S.Q>며칠 전부터 너가 계속 신경쓰였고 </S.Q>
               <S.Q>지금은 내가 널 좋아한다는 게 </S.Q>
               <S.Q>확실해졌어 넌 나 어떻게 생각해?</S.Q>
             </S.Question>
