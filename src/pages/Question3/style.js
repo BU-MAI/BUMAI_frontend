@@ -21,7 +21,6 @@ export const Title = styled.div`
 
 export const QusetionContainer = styled.div`
   width: 100%;
-  height: 20vh;
   display: flex;
 `;
 
@@ -30,7 +29,6 @@ export const Question = styled.div`
   padding: 1%;
   width: 100%;
   text-align: center;
-  color: #4e4e4e;
 `;
 
 export const LeftQuestion = styled.div`
@@ -112,7 +110,6 @@ export const NextBtn = styled.button`
   border: none;
   color: white;
   border-radius: 10px;
-  cursor: pointer;
 `;
 
 export const BackBtn = styled.button`
@@ -122,5 +119,4 @@ export const BackBtn = styled.button`
   border: none;
   color: white;
   border-radius: 10px;
-  cursor: pointer;
 `;
