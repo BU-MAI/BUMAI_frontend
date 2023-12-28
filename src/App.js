@@ -14,6 +14,7 @@ import Question8 from "./pages/Question8/index";
 import Question9 from "./pages/Question9/index";
 import Question10 from "./pages/Question10/index";
 import ResultPython from "./pages/ResultPython";
+import ResultJava from "./pages/ResultJava";
 
 const App = () => {
   return (
