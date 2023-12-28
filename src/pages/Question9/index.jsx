@@ -1,9 +1,19 @@
 import * as S from "./style";
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
-import Q1 from "../../assets/Q1.png";
+import Q9 from "../../assets/Q9.svg";
 import { useState } from "react";
 
-const Question1 = () => {
+const Question9 = () => {
+  const navigate = useNavigate();
+
+  const navigateToQ8 = () => {
+    navigate("/question8");
+  };
+
+  const navigateToQ10 = () => {
+    navigate("/question10");
+  };
   const [selectedButton, setSelectedButton] = useState(null);
 
   const handleButtonClick = (buttonId) => {
@@ -14,22 +24,23 @@ const Question1 = () => {
       <Header />
       <S.Question1Layout>
         <S.Question1Title>
-          <S.Title>당신의 코드 스타일은?</S.Title>
-          <img src={Q1} />
+          <S.Title>
+            평소와 같이 부소마고 생활 중.. 한 학생이 나에게 고백을 한다💌
+          </S.Title>
+          <S.Title>당신이 더 좋아하는 고백 멘트는?</S.Title>
+          <S.Img src={Q9} />
         </S.Question1Title>
         <S.QusetionContainer>
           <S.LeftQuestion>
             <S.Question>
-              <S.Q>구현이 먼저!</S.Q>
-              <S.Q>더러워도 구현을 먼저 한 후 리펙토링하면</S.Q>
-              <S.Q>가독성 높여가는 스타일</S.Q>
+              <S.Q>너를 알게된 며칠 전부터 너가 계속 신경쓰였고 </S.Q>
+              <S.Q>지금은 내가 널 좋아한다는 게 </S.Q>
+              <S.Q>확실해졌어 넌 나 어떻게 생각해?</S.Q>
             </S.Question>
           </S.LeftQuestion>
           <S.RightQuestion>
             <S.Question>
-              <S.Q>가독성이 중요!!</S.Q>
-              <S.Q>조금 느리더라도 예쁘고 간결하게</S.Q>
-              <S.Q>코드를 짜나가는 스타일</S.Q>
+              <S.Q>야 나 너 좋아해 나랑 사귈래?</S.Q>
             </S.Question>
           </S.RightQuestion>
         </S.QusetionContainer>
@@ -56,12 +67,12 @@ const Question1 = () => {
           ></S.Btn1>
         </S.QusetionBtn>
         <S.QusetionBtn>
-          <S.NextBtn>이전</S.NextBtn>
-          <S.BackBtn>다음</S.BackBtn>
+          <S.NextBtn onClick={navigateToQ8}>이전</S.NextBtn>
+          <S.BackBtn onClick={navigateToQ10}>다음</S.BackBtn>
         </S.QusetionBtn>
       </S.Question1Layout>
     </>
   );
 };
 
-export default Question1;
+export default Question9;

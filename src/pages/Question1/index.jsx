@@ -1,9 +1,19 @@
 import * as S from "./style";
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
-import Q1 from "../../assets/Q1.png";
+import Q1 from "../../assets/Q1.svg";
 import { useState } from "react";
 
 const Question1 = () => {
+  const navigate = useNavigate();
+
+  const navigateToMain = () => {
+    navigate("/");
+  };
+
+  const navigateToQ2 = () => {
+    navigate("/question2");
+  };
   const [selectedButton, setSelectedButton] = useState(null);
 
   const handleButtonClick = (buttonId) => {
@@ -15,7 +25,7 @@ const Question1 = () => {
       <S.Question1Layout>
         <S.Question1Title>
           <S.Title>당신의 코드 스타일은?</S.Title>
-          <img src={Q1} />
+          <S.Img src={Q1} />
         </S.Question1Title>
         <S.QusetionContainer>
           <S.LeftQuestion>
@@ -56,8 +66,8 @@ const Question1 = () => {
           ></S.Btn1>
         </S.QusetionBtn>
         <S.QusetionBtn>
-          <S.NextBtn>이전</S.NextBtn>
-          <S.BackBtn>다음</S.BackBtn>
+          <S.NextBtn onClick={navigateToMain}>이전</S.NextBtn>
+          <S.BackBtn onClick={navigateToQ2}>다음</S.BackBtn>
         </S.QusetionBtn>
       </S.Question1Layout>
     </>

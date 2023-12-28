@@ -1,9 +1,19 @@
 import * as S from "./style";
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
-import Q1 from "../../assets/Q1.png";
+import Q10 from "../../assets/Q10.svg";
 import { useState } from "react";
 
-const Question1 = () => {
+const Question10 = () => {
+  const navigate = useNavigate();
+
+  const navigateToQ9 = () => {
+    navigate("/question8");
+  };
+
+  const navigateToResult = () => {
+    navigate("/");
+  };
   const [selectedButton, setSelectedButton] = useState(null);
 
   const handleButtonClick = (buttonId) => {
@@ -14,22 +24,23 @@ const Question1 = () => {
       <Header />
       <S.Question1Layout>
         <S.Question1Title>
-          <S.Title>당신의 코드 스타일은?</S.Title>
-          <img src={Q1} />
+          <S.Title>친구가 0.1점 차이로 B를 맞아서 슬퍼하고 있다😢</S.Title>
+          <S.Title>당신이 친구한테 할 말은?</S.Title>
+          <S.Img src={Q10} />
         </S.Question1Title>
         <S.QusetionContainer>
           <S.LeftQuestion>
             <S.Question>
-              <S.Q>구현이 먼저!</S.Q>
-              <S.Q>더러워도 구현을 먼저 한 후 리펙토링하면</S.Q>
-              <S.Q>가독성 높여가는 스타일</S.Q>
+              <S.Q>이미 지나가서 되돌릴 수 없는 일에 너무</S.Q>
+              <S.Q>후회하지 말고 이제부터는 저런 일 없도록 </S.Q>
+              <S.Q>더 열심히 해 </S.Q>
             </S.Question>
           </S.LeftQuestion>
           <S.RightQuestion>
             <S.Question>
-              <S.Q>가독성이 중요!!</S.Q>
-              <S.Q>조금 느리더라도 예쁘고 간결하게</S.Q>
-              <S.Q>코드를 짜나가는 스타일</S.Q>
+              <S.Q>헐ㄹ.. 0.1점차이?? 진짜 아쉽겠다..</S.Q>
+              <S.Q>나였어도 진짜 아쉬웠을 듯.. </S.Q>
+              <S.Q>다음에 더 노력해서 꼭 A 받을 수 있길 바래!</S.Q>
             </S.Question>
           </S.RightQuestion>
         </S.QusetionContainer>
@@ -56,12 +67,12 @@ const Question1 = () => {
           ></S.Btn1>
         </S.QusetionBtn>
         <S.QusetionBtn>
-          <S.NextBtn>이전</S.NextBtn>
-          <S.BackBtn>다음</S.BackBtn>
+          <S.NextBtn onClick={navigateToQ9}>이전</S.NextBtn>
+          <S.BackBtn onClick={navigateToResult}>다음</S.BackBtn>
         </S.QusetionBtn>
       </S.Question1Layout>
     </>
   );
 };
 
-export default Question1;
+export default Question10;
