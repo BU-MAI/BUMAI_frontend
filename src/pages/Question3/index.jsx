@@ -1,9 +1,19 @@
 import * as S from "./style";
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
-import Q1 from "../../assets/Q1.png";
+import Q3 from "../../assets/Q3.svg";
 import { useState } from "react";
 
-const Question1 = () => {
+const Question3 = () => {
+  const navigate = useNavigate();
+
+  const navigateToQ1 = () => {
+    navigate("/question2");
+  };
+
+  const navigateToQ3 = () => {
+    navigate("/question4");
+  };
   const [selectedButton, setSelectedButton] = useState(null);
 
   const handleButtonClick = (buttonId) => {
@@ -14,22 +24,23 @@ const Question1 = () => {
       <Header />
       <S.Question1Layout>
         <S.Question1Title>
-          <S.Title>당신의 코드 스타일은?</S.Title>
-          <img src={Q1} />
+          <S.Title>딴따라라 따란따라~</S.Title>
+          <S.Title>기상송이 울렸다! 당신의 등교 시간은?</S.Title>
+          <S.Img src={Q3} />
         </S.Question1Title>
         <S.QusetionContainer>
           <S.LeftQuestion>
             <S.Question>
-              <S.Q>구현이 먼저!</S.Q>
-              <S.Q>더러워도 구현을 먼저 한 후 리펙토링하면</S.Q>
-              <S.Q>가독성 높여가는 스타일</S.Q>
+              <S.Q>안전하게 일찍 나가야지! 빠르게 일어나</S.Q>
+              <S.Q>준비하고 등교송이 끝나기 전 학교를 가는</S.Q>
+              <S.Q>스타일</S.Q>
             </S.Question>
           </S.LeftQuestion>
           <S.RightQuestion>
             <S.Question>
-              <S.Q>가독성이 중요!!</S.Q>
-              <S.Q>조금 느리더라도 예쁘고 간결하게</S.Q>
-              <S.Q>코드를 짜나가는 스타일</S.Q>
+              <S.Q>벌점만 안 받으면 되지ㅎ 등교송이 끝나고</S.Q>
+              <S.Q>나가야하는 시간을 딱 맞춰 학교를 가는 </S.Q>
+              <S.Q>스타일</S.Q>
             </S.Question>
           </S.RightQuestion>
         </S.QusetionContainer>
@@ -56,12 +67,12 @@ const Question1 = () => {
           ></S.Btn1>
         </S.QusetionBtn>
         <S.QusetionBtn>
-          <S.NextBtn>이전</S.NextBtn>
-          <S.BackBtn>다음</S.BackBtn>
+          <S.NextBtn onClick={navigateToQ1}>이전</S.NextBtn>
+          <S.BackBtn onClick={navigateToQ3}>다음</S.BackBtn>
         </S.QusetionBtn>
       </S.Question1Layout>
     </>
   );
 };
 
-export default Question1;
+export default Question3;

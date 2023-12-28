@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
+export const Img = styled.img`
+  position: relative;
+  top: 1em;
+`;
 export const Question1Layout = styled.div`
   max-width: 100%;
   display: flex;
-  padding: 7% 20% 0 20%;
+  padding: 8% 20% 0 20%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -20,6 +24,7 @@ export const Title = styled.div`
 `;
 
 export const QusetionContainer = styled.div`
+  padding: 1%;
   width: 100%;
   display: flex;
 `;

@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
+export const Img = styled.img`
+  position: relative;
+  top: 1em;
+`;
 export const Question1Layout = styled.div`
   max-width: 100%;
   display: flex;
-  padding: 7% 15% 0 15%;
+  padding: 8% 20% 0 20%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -20,6 +24,7 @@ export const Title = styled.div`
 `;
 
 export const QusetionContainer = styled.div`
+  padding: 1%;
   width: 100%;
   display: flex;
 `;
@@ -29,6 +34,7 @@ export const Question = styled.div`
   padding: 1%;
   width: 100%;
   text-align: center;
+  color: #4e4e4e;
 `;
 
 export const LeftQuestion = styled.div`
@@ -107,15 +113,19 @@ export const NextBtn = styled.button`
   width: 12%;
   height: 8vh;
   background-color: #fc8cb4;
+  cursor: pointer;
   border: none;
   color: white;
   border-radius: 10px;
+  font-size: 15px;
 `;
 
 export const BackBtn = styled.button`
   width: 12%;
   height: 8vh;
   background-color: #fc8cb4;
+  font-size: 15px;
+  cursor: pointer;
   border: none;
   color: white;
   border-radius: 10px;
