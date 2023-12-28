@@ -49,3 +49,7 @@ export const Font = styled.div`
   line-height: normal;
   cursor: pointer;
 `;
+
+export const Text = styled.div`
+  color: black;
+`;
