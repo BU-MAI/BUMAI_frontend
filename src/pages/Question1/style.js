@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Question1Layout = styled.div`
   max-width: 100%;
   display: flex;
-  padding: 7% 15% 0 15%;
+  padding: 7% 20% 0 20%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,6 @@ export const Title = styled.div`
 
 export const QusetionContainer = styled.div`
   width: 100%;
-  height: 20vh;
   display: flex;
 `;
 
@@ -109,18 +108,20 @@ export const NextBtn = styled.button`
   width: 12%;
   height: 8vh;
   background-color: #fc8cb4;
+  cursor: pointer;
   border: none;
   color: white;
   border-radius: 10px;
-  cursor: pointer;
+  font-size: 15px;
 `;
 
 export const BackBtn = styled.button`
   width: 12%;
   height: 8vh;
   background-color: #fc8cb4;
+  font-size: 15px;
+  cursor: pointer;
   border: none;
   color: white;
   border-radius: 10px;
-  cursor: pointer;
 `;
