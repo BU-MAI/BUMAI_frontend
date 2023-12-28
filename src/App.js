@@ -14,8 +14,12 @@ const App = () => {
           <Route path="/" element={<Main />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+<<<<<<< HEAD
           <Route path="/Question1" element={<Question1 />} />
           <Route path="/ResultPython" element={<ResultPython />} />
+=======
+          <Route path="/question1" element={<Question1 />} />
+>>>>>>> 7d6720a35517f3933b35bba9a15297ca1a0425e2
         </Routes>
       </BrowserRouter>
     </>
