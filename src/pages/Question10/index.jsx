@@ -2,7 +2,8 @@ import * as S from "./style";
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import Q10 from "../../assets/Q10.svg";
-import { useState } from "react";
+import Loading from "../../assets/Loading.svg";
+import { useState, useEffect } from "react";
 
 const Question10 = () => {
   const navigate = useNavigate();
@@ -12,13 +13,29 @@ const Question10 = () => {
   };
 
   const navigateToResult = () => {
-    navigate("/resultPython");
+    setLoading(true);
   };
+
   const [selectedButton, setSelectedButton] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    let timer;
+
+    if (loading) {
+      timer = setTimeout(() => {
+        setLoading(false);
+        navigate("/resultPython");
+      }, 3000);
+    }
+
+    return () => clearTimeout(timer);
+  }, [loading, navigate]);
 
   const handleButtonClick = (buttonId) => {
     setSelectedButton(buttonId);
   };
+
   return (
     <>
       <Header />
@@ -70,6 +87,24 @@ const Question10 = () => {
           <S.NextBtn onClick={navigateToQ9}>이전</S.NextBtn>
           <S.BackBtn onClick={navigateToResult}>다음</S.BackBtn>
         </S.QusetionBtn>
+
+        {loading && (
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(255, 255, 255, 0.8)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img src={Loading} />
+          </div>
+        )}
       </S.Question1Layout>
     </>
   );
