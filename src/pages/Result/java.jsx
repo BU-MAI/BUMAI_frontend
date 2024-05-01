@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "../../style";
-import java from "../../assets/java.png";
+import java from "../../assets/result/java.svg";
 import Header from "../../components/Header";
 
 const ResultJava = () => {
