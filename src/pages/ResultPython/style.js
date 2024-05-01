@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const ResultMain = styled.div`
   max-width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
-  padding: 15% 20% 16% 20%;
   background-color: #ffebf2;
   align-items: center;
   justify-content: center;
