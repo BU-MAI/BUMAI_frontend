@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "../../style";
+import * as S from "../../resultstyle";
 import swift from "../../assets/result/swift.svg";
 import Header from "../../components/Header";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "../../style";
+import * as S from "../../resultstyle";
 import c_hash from "../../assets/result/c_hash.svg";
 import Header from "../../components/Header";
 
