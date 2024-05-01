@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "../../style";
-import java from "../../assets/java.png";
+import c_hash from "../../assets/result/c_hash.svg";
 import Header from "../../components/Header";
 
 const ResultC_Hash = () => {
@@ -8,7 +8,7 @@ const ResultC_Hash = () => {
     <>
       <Header />
       <S.ResultMain>
-        <img src={java} style={{ width: "300px" }} />
+        <img src={c_hash} style={{ width: "300px" }} />
         <S.ResultText>
           <S.ResultTitle>
             <p>당신은</p>

@@ -16,6 +16,11 @@ import Question10 from "./pages/Question10/index";
 import ResultPython from "./pages/Result/python";
 import ResultJava from "./pages/Result/java";
 import ResultC_Hash from "./pages/Result/c_hash";
+import ResultSwift from "./pages/Result/swift";
+import ResultC from "./pages/Result/c";
+import ResultRuby from "./pages/Result/ruby";
+import ResultJs from "./pages/Result/js";
+import ResultC_Plus from "./pages/Result/c_plus";
 
 const App = () => {
   return (
@@ -38,6 +43,11 @@ const App = () => {
           <Route path="/resultpython" element={<ResultPython />} />
           <Route path="/resultjava" element={<ResultJava />} />
           <Route path="/resultc_hash" element={<ResultC_Hash />} />
+          <Route path="/resultswift" element={<ResultSwift />} />
+          <Route path="/resultc" element={<ResultC />} />
+          <Route path="/resultruby" element={<ResultRuby />} />
+          <Route path="/resultjs" element={<ResultJs />} />
+          <Route path="/resultc_plus" element={<ResultC_Plus />} />
         </Routes>
       </BrowserRouter>
     </>
