@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./style";
+import * as S from "../../style";
 import python from "../../assets/python.png";
 import Header from "../../components/Header";
 

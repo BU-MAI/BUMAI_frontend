@@ -13,8 +13,9 @@ import Question7 from "./pages/Question7/index";
 import Question8 from "./pages/Question8/index";
 import Question9 from "./pages/Question9/index";
 import Question10 from "./pages/Question10/index";
-import ResultPython from "./pages/ResultPython";
-import ResultJava from "./pages/ResultJava";
+import ResultPython from "./pages/Result/python";
+import ResultJava from "./pages/Result/java";
+import ResultC_Hash from "./pages/Result/c_hash";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/question10" element={<Question10 />} />
           <Route path="/resultpython" element={<ResultPython />} />
           <Route path="/resultjava" element={<ResultJava />} />
+          <Route path="/resultc_hash" element={<ResultC_Hash />} />
         </Routes>
       </BrowserRouter>
     </>
